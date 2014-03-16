@@ -231,7 +231,7 @@ var FilterForm = React.createClass({
       { name: '>=', val: 'gte' },
       { name: '=', val: 'eq' },
       { name: '<', val: 'lt' },
-      { name: '<=', val: 'tte' },
+      { name: '<=', val: 'lte' },
     ]
   },
 
