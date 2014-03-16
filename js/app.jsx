@@ -52,33 +52,27 @@ var comps = {
 
 var ApplicationView = React.createClass({
   render: function() {
-    var innerView;
-
     if (this.state.error) {
-      innerView = <div className='error'>Error!</div>;
+      return <div className='error'>Error!</div>;
     } else if (this.state.loading) {
-      innerView = <div className='loading'>Loading...</div>;
+      return <div className='loading'>Loading...</div>;
     } else {
-      innerView = [
-        <FilterView
-          filters={this.state.filters}
-          onAddFilter={this.onAddFilter}
-          onRemoveFilter={this.onRemoveFilter} />,
-        <div className="container-content">
-          <WallpaperView
-            results={this.state.results} />
-          <NavigationView
-            pagination={this.state.pagination}
-            onChangePage={this.onChangePage} />
+      return (
+        <div className="container">
+          <FilterView
+            filters={this.state.filters}
+            onAddFilter={this.onAddFilter}
+            onRemoveFilter={this.onRemoveFilter} />,
+          <div className="container-content">
+            <WallpaperView
+              results={this.state.results} />
+            <NavigationView
+              pagination={this.state.pagination}
+              onChangePage={this.onChangePage} />
+          </div>
         </div>
-      ];
+      );
     }
-
-    return (
-      <div className="container">
-        {innerView}
-      </div>
-    );
   },
 
   getInitialState: function() {
