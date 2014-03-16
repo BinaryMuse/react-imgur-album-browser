@@ -62,7 +62,7 @@ var ApplicationView = React.createClass({
           <FilterView
             filters={this.state.filters}
             onAddFilter={this.onAddFilter}
-            onRemoveFilter={this.onRemoveFilter} />,
+            onRemoveFilter={this.onRemoveFilter} />
           <div className="container-content">
             <WallpaperView
               results={this.state.results} />
