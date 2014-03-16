@@ -383,7 +383,7 @@ var NavigationView = React.createClass({
 
     return (
       <div className='navigation'>
-        <button onClick={this.onBackClick}>Next</button>
+        <button onClick={this.onBackClick}>Prev</button>
         {' '}Page: {page}{' '}
         <button onClick={this.onNextClick}>Next</button>
       </div>
@@ -392,7 +392,7 @@ var NavigationView = React.createClass({
 
   onBackClick: function(e) {
     var page = mori.get(this.props.pagination, 'page');
-    this.props.onChangePage(page - 1);
+    if (page > 1) this.props.onChangePage(page - 1);
   },
 
   onNextClick: function(e) {
