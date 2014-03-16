@@ -223,6 +223,7 @@ var FilterForm = React.createClass({
     properties: [
       { name: 'Width', val: 'width', placeholder: 'ex: 2560' },
       { name: 'Height', val: 'height', placeholder: 'ex: 1080' },
+      { name: 'Bytes', val: 'size', placeholder: 'ex: 8192'}
       // { name: 'Aspect Ratio', val: 'ratio', placeholder: 'ex: 16:9' }
     ],
     comparators: [
