@@ -300,7 +300,7 @@ var FilterList = React.createClass({
   render: function() {
     var lis = mori.clj_to_js(mori.map(function(filter) {
       return (
-        <li key={mori.hash(filter)}>
+        <li key={mori.hash(filter)} className='filter'>
           {mori.get(filter, 'string')}
           <span className='remove' onClick={this.onRemoveFilter.bind(this, filter)} />
         </li>
