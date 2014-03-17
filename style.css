@@ -88,12 +88,19 @@ body {
   display: inline-block;
 }
 
-.wallpaper-thumb {
+.wallpaper-thumb-container {
+  position: relative;
   width: 320px;
   height: 320px;
-  background-position: center bottom;
-  background-repeat: no-repeat;
   margin-bottom: 10px;
+}
+
+img.wallpaper-thumb {
+  max-width: 320px;
+  max-height: 320px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .resolution {

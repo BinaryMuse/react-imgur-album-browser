@@ -360,7 +360,9 @@ var WallpaperItem = React.createClass({
     return (
       <div className='wallpaper-entry'>
         <a href={link} target='_blank'>
-          <div className='wallpaper-thumb' style={{backgroundImage: 'url(' + thumbLink + ')'}} />
+          <div className='wallpaper-thumb-container'>
+            <img className='wallpaper-thumb' src={thumbLink} />
+          </div>
         </a>
         <div>
           <a href={'http://imgur.com/download/' + id}>download</a>
