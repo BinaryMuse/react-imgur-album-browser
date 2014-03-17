@@ -208,11 +208,9 @@ var FilterView = React.createClass({
   render: function() {
     return (
       <div className="container-nav">
-        <div>
-          <h1>Filters</h1>
-          {this.transferPropsTo(<FilterForm />)}
-          {this.transferPropsTo(<FilterList />)}
-        </div>
+        <h1>Filters</h1>
+        {this.transferPropsTo(<FilterForm />)}
+        {this.transferPropsTo(<FilterList />)}
       </div>
     );
   }
@@ -224,7 +222,6 @@ var FilterForm = React.createClass({
       { name: 'Width', val: 'width', placeholder: 'ex: 2560' },
       { name: 'Height', val: 'height', placeholder: 'ex: 1080' },
       { name: 'Bytes', val: 'size', placeholder: 'ex: 8192'}
-      // { name: 'Aspect Ratio', val: 'ratio', placeholder: 'ex: 16:9' }
     ],
     comparators: [
       { name: '>', val: 'gt' },
